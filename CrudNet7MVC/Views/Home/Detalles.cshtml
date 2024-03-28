@@ -1,0 +1,42 @@
+﻿@model CrudNet7MVC.Models.Contacto
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<h1>Detalles</h1>
+
+<div class="row w-50 mx-auto">
+    <div class="offset-12">
+        <div class="card border mx-auto mt-4">
+            <div class="card-header bg-dark">
+                <h3 class="text-white">Editar Contacto</h3>
+            </div>
+            <div class="card-body w-50 mx-auto">
+                <div class="form-group">
+                    <div class="form-group mt-3">
+                        <strong>@Html.DisplayNameFor(m => m.Nombre): </strong>
+                        @Html.DisplayFor(m => m.Nombre)
+                    </div>
+                    <div class="form-group mt-3">
+                        <strong>@Html.DisplayNameFor(m => m.Celular): </strong>
+                        @Html.DisplayFor(m => m.Celular)
+                    </div>
+                    <div class="form-group mt-3">
+                        <strong>@Html.DisplayNameFor(m => m.Email): </strong>
+                        @Html.DisplayFor(m => m.Email)
+                    </div>
+                    <div class="form-group mt-3">
+                        <strong>@Html.DisplayNameFor(m => m.FechaCreacion): </strong>
+                        @Html.DisplayFor(m => m.FechaCreacion)
+                    </div>
+                </div>
+
+            </div>
+            <div class="mx-auto pb-3">
+                <a asp-action="Editar" asp-route-id="@Model?.Id">Edit</a> |
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </div>
+    </div>
+</div>
